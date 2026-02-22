@@ -9,7 +9,7 @@ def sanitize_filename(name):
     return re.sub(r'[\\/*?:"<>|]', "", str(name)).strip()
 
 def main():
-    target_dir = r"C:\Users\bogus\Downloads\Movies"
+    target_dir = r"C:\Movies"
     ia = Cinemagoer()
     
     # Cache to avoid repetitive API calls for files of the same movie
