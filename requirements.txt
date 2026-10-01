@@ -1,0 +1,2 @@
+guessit>=3.7.1
+cinemagoer>=2023.5.1
