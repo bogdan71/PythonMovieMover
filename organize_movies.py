@@ -162,13 +162,13 @@ def main():
             continue
 
         folder_path = source_dir / folder_name
-        folder_path.mkdir(exist_ok=True, parents=True)
         destination = resolve_destination(folder_path, filename)
 
         if args.dry_run:
             logging.info("Would move %s -> %s", media_path, destination)
             continue
 
+        folder_path.mkdir(exist_ok=True, parents=True)
         try:
             shutil.move(str(media_path), str(destination))
             logging.info("Moved %s -> %s", media_path.name, destination.relative_to(source_dir))
